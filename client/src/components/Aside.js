@@ -5,6 +5,10 @@ class Aside extends Component {
     return (
       <div className="app-home-aside">
         <h1>Side Bar</h1>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
       </div>
     );
   }
