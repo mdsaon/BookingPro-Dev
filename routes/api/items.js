@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 //Item model
-const Item = require("../../models/Item");
+const Item = require("../../models/SignUpSchema");
 
 //route GET api/items
 // get all items
