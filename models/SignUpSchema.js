@@ -20,7 +20,7 @@ const SignUpSchema = new Schema({
     },
     email: {
         type: String,
-        label: email,
+        label: "email",
         required: true
     },
     password: {
