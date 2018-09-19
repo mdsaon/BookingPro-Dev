@@ -1,3 +1,8 @@
+.home-header{ grid-area: home-header; }
+.main-view { grid-area: main-view; }
+.home-aside{ grid-area: home-aside; }
+.home-main{ grid-area: home-main; }
+.home-footer{ grid-area: home-footer; }
 .App {
   text-align: center;
 }
@@ -6,80 +11,36 @@
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
-.app-home-header {
-  background-color: grey;
-  height: 12vh;
-  padding: 1.2%;
-  color: white;
-  font-size: 1.6vw;
-  display:flex;
-  justify-content: center
-}
-
-.main-view{
+/* Main Css Container */
+.app-home{
   display:grid;
-  grid-template-columns: 20% 75%;
-  grid-gap: 0;
+  grid-template-areas:
+    'home-header home-header home-header home-header home-header home-header'
+    'main-view main-view main-view main-view main-view main-view'
+    'home-footer home-footer home-footer home-footer home-footer home-footer';
+}
+/* Header */
+.home-header{
+  display: grid;
+  background-color: blueviolet;
 }
 
-.App-title {
-  font-size: 1.5em;
+/* Main Content */
+.main-view{
+  display: grid;
+  background-color: crimson;
+  grid-template-areas: 
+    'home-aside home-main home-main home-main home-main home-main'
+}
+.home-aside{
+  background-color: darkcyan;
+}
+.home-main{
+  background-color: crimson;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.app-home-aside{
-    height: 74%;
-    width: 20vw;
-    position: fixed;
-    z-index: 1;
-    top: 20;
-    left: 0;
-    background-color: #29A945;
-    overflow-x: hidden;
-    padding-top: 20px;
-    
-}
-
-.app-home-main{
-  background-color: pink;
-  height: 200px;
-  margin: 0 auto;
-  width: 106.7%;
-  overflow: hidden
-}
-
-.app-home-aside a{
-  padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-}
-
-.app-home-footer{
-   display: flex;
-   justify-content: center;
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 6vh;
-   background-color: red;
-   color: white;
-   font-size: 1.5vh
+/* Footer */
+.home-footer{
+  display: grid;
+  background-color: cadetblue;
 }
